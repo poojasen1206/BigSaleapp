@@ -1,1 +1,44 @@
-<p>upload-items works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-lg-6 m-auto">
+            <h5 style="text-align:center;margin-top:10px">Upload Items</h5>
+		<form [formGroup]="addForm" (ngSubmit)="onSubmit()"enctype="multipart/form-data">
+		<div class="row">
+			<div class="form-group col-12 col-sm-12 col-md-12 col-lg-12">
+			  <label for="name">Title</label>
+			  <input type="name" formControlName="title" name="title" class="form-control input-text" id="title" placeholder="Enter name">
+			</div>
+        </div>
+        <div class="row">
+			<div class="form-group col-12 col-sm-12 col-md-12 col-lg-12">
+			  <label for="Price">Price</label>
+			  <input type="name" formControlName="price" name="price" class="form-control input-text" id="price" placeholder="Enter name">
+			</div>
+        </div>
+        <div class="row">
+			<div class="form-group col-12 col-sm-12 col-md-12 col-lg-12">
+			  <label for="Description">Description</label>
+			  <input type="name" formControlName="description" name="description" class="form-control input-text" id="description" placeholder="Enter name">
+			</div>
+        </div>
+        <div class="row">
+			<div class="form-group col-12 col-sm-12 col-md-12 col-lg-12">
+			  <label for="Quantity">Quantity</label>
+			  <input type="name" formControlName="quantity" name="quantity" class="form-control input-text" id="quantity" placeholder="Enter name">
+			</div>
+        </div>
+        <div class="row">
+			<div class="form-group col-12 col-sm-12 col-md-12 col-lg-12">
+			  <label for="Image">Image</label>
+			  <input type="file" (change)="onFileSelect($event)" formControlName="image" name="image" class="form-control input-text" id="Image" placeholder="Enter name">
+			</div>
+        </div>
+        <div class="row">
+			<div class="form-group col-12 col-sm-12 col-md-12 col-lg-12">
+			   <button class="btn btn-primary ">Submit</button>
+			</div>
+        </div>
+        </form>
+        </div>
+    </div>
+</div>
