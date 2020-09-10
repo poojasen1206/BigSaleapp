@@ -1,1 +1,17 @@
-<p>home works!</p>
+<div class="container ">
+    <div class="row">
+       <div class="col-12 col-sm-12 col-md-12 col-lg-12 mt-5"><h1 style="text-align:center;">!! BIG Sale !!</h1></div>
+    </div>
+    <div class="row ">
+        <div *ngFor="let items of this.item" class="col-12 col-sm-6 col-md-4 col-lg-3 ">
+            <div class="card" style="width: ;">
+                <img class="card-img-top" src="assets/img/{{items.image}}" alt="Card image cap">
+                <div class="card-body">
+                  <span class="card-title"><b>{{items.title}}</b></span><span class="card-title float-right">{{items.price}}</span>
+                  <p class="card-text">{{items.description}}</p>
+                  <a href="#" class="btn btn-primary">Add-to-Cart</a>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
