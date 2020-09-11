@@ -4,14 +4,18 @@
     </div>
     <div class="row ">
         <div *ngFor="let items of this.item" class="col-12 col-sm-6 col-md-4 col-lg-3 ">
-            <div class="card" style="width: ;">
+            <div class="card">
                 <img class="card-img-top" src="assets/img/{{items.image}}" alt="Card image cap">
                 <div class="card-body">
-                  <span class="card-title"><b>{{items.title}}</b></span><span class="card-title float-right">{{items.price}}</span>
+                  <h5 class="card-title text-center">{{items.title}}</h5>
+                  <h6 class="card-subtitle mb-2 text-muted text-center">{{items.price}}</h6>
                   <p class="card-text">{{items.description}}</p>
-                  <a href="#" class="btn btn-primary">Add-to-Cart</a>
+                  <a href="javascript:void(0);"class="btn btn-default p-2"(click)="ViewDetails(items)">View Details</a>
+                  <button class="btn btn-info p-2" (click)="onclickAddtocart(items)">Add-to-Cart</button>
                 </div>
               </div>
         </div>
     </div>
+  
+  
 </div>

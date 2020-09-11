@@ -1,0 +1,72 @@
+
+	
+	 
+	 <div class="shopping-cart mt-4" *ngIf="this.cardData.length >= 1">
+	 <div class="row">
+		 <div class="col-12"><h2>Your added items</h2></div>
+	</div>
+	  <div class="">
+		<label class="product-image">Image</label>
+		<label class="product-details">Product</label>
+		<label class="product-price">Price</label>
+		<label class="product-quantity">Quantity</label>
+		<label class="product-removal">Remove</label>
+		<label class="product-line-price">Total</label>
+	  </div>
+	  
+	   <div class="product" *ngFor="let addeditem of this.cardData; index as i"> 
+		<div class="item-div">
+		 <div class="product-image">
+		  <img src="assets/kids/{{addeditem.image}}">
+		</div>
+		<div class="product-details">
+		  <div class="product-title">{{addeditem.title}}</div>
+		  <p class="product-description"> {{addeditem.description}}It has a lightweight, breathable mesh upper with forefoot cables for a locked-down fit.</p>
+		</div>
+		<div class="product-price">{{addeditem.price}}</div>
+		<div class="product-quantity">
+			
+  		  <!-- <input type="number" #qunatity value="{{addeditem.quantity}}" (change)="quntchange(qunatity, i)" id="quantity"min="1"> -->
+			<button class="add-btn" clear (click)="decrementQty(addeditem)">-</button>
+			<span>{{addeditem.quantity}}</span>
+			<button class="add-btn" clear (click)="incrementQty(addeditem)">+</button>
+		  
+		
+		</div>
+		<div class="product-removal">
+		  <button class="remove-product"  (click)="removeitem(i);">
+			Remove
+		  </button>
+		</div>
+		<!-- <input type="time"value="{{addeditem.quantity*addeditem.price}}" #itemttl> -->
+		<div  class="product-line-price" >{{addeditem.quantity*addeditem.price}}</div> 
+	   </div>
+	   </div> 
+	 
+	  
+	 
+	   <div class="totals">
+		<div class="totals-item">
+		  <label>Subtotal</label>
+		  <div class="totals-value" id="cart-subtotal">{{cardtotal}}</div>
+
+		</div>
+		<!-- <div class="totals-item">
+		  <label>Tax (5%)</label>
+		  <div class="totals-value" id="cart-tax">3.60</div>
+		</div> -->
+		<div class="totals-item">
+		  <label>Shipping</label>
+		  <div class="totals-value" id="cart-shipping">15.00</div>
+		</div>
+		<div class="totals-item totals-item-total">
+		  <label>Grand Total</label>
+		  <div class="totals-value" id="cart-total">{{cardtotal+15}}</div>
+		</div>
+	  </div>
+		   
+		  <!-- <button class="checkout" (click)="checkout()">Checkout</button> -->
+		  <a routerLink="/checkout" routerLinkActive="active" class= "checkout" >checkout</a>
+   
+	 
+	</div>

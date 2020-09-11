@@ -4,13 +4,14 @@ import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { UploadItemsComponent } from './upload-items/upload-items.component';
+import { ViewDetailsComponent } from './view-details/view-details.component';
 
 const routes: Routes = [
   {
-    path: '', redirectTo:'Home', pathMatch: 'full'
+    path: '', redirectTo:'/', pathMatch: 'full'
    },
    {
-    path:'Home', component:HomeComponent
+    path:'', component:HomeComponent
   },
   {
     path:'about-us', component:AboutUsComponent
@@ -20,6 +21,9 @@ const routes: Routes = [
   },
   {
     path:'contact-us', component:ContactUsComponent
+  },
+  {
+    path:'details/:id', component:ViewDetailsComponent
   }
 ];
 

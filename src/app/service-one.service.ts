@@ -17,5 +17,14 @@ export class ServiceOneService {
   getAllitems():Observable<ApiResponse>{
     return this.http.get<ApiResponse>(this.baseUrl + 'getallItems.php');
    }
+   
+  getItemById(id:number):Observable<ApiResponse>{
+    let httpHeaders = new HttpHeaders()
+    .set('Content-Type','applicatin/json');
+    let options ={
+    headers: httpHeaders
+    };
+    return this.http.get<ApiResponse>(this.baseUrl + 'getById.php?id='+ id, options);
+   }
 
 }

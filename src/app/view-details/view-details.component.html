@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div class="mt-5"> </div>
+        <div *ngFor="let itembyid of this.itembyid" class="mt-5" >
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+            <img src="assets/img/{{itembyid.image}}">
+            </div>
+            <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+                <h1>{{itembyid.title}}</h1> 
+                <h6>{{itembyid.description}}</h6>
+                <h6>{{itembyid.price}}</h6>
+            </div>
+
+        </div>
+        
+   </div>
+</div>

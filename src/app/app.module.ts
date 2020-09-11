@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { UploadItemsComponent } from './upload-items/upload-items.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { ViewDetailsComponent } from './view-details/view-details.component';
+import { ViewCartComponent } from './view-cart/view-cart.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     HomeComponent,
     UploadItemsComponent,
     AboutUsComponent,
-    ContactUsComponent
+    ContactUsComponent,
+    ViewDetailsComponent,
+    ViewCartComponent
   ],
   imports: [
     BrowserModule,
