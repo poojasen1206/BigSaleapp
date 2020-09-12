@@ -1,4 +1,4 @@
-	 <div class="shopping-cart mt-4" >
+	 <div class="shopping-cart mt-4" *ngIf="this.cardData.length > 0">
 	 <div class="row">
 		 <div class="col-12"><h2>Your added items</h2></div>
 	</div>
@@ -14,7 +14,7 @@
 	   <div class="product" *ngFor="let addeditem of this.cardData; index as i"> 
 		<div class="item-div">
 		 <div class="product-image">
-		  <img src="assets/kids/{{addeditem.image}}">
+		  <img src="assets/img/{{addeditem.image}}">
 		</div>
 		<div class="product-details">
 		  <div class="product-title">{{addeditem.title}}</div>

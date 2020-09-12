@@ -28,15 +28,15 @@ export class ViewCartComponent implements OnInit {
     .subscribe((products:any) => {
       this.size = products.length;
        console.log(this.size);
-      // if (!this.cardData.some((item) => item.id == products.id)) {
-      //  this.cardData.push(products);
-      //  this.cardtotal=0;
-      //  this.cardData.forEach(item =>{
-      //    this.cardtotal += (item.quantity*item.price)
-      //    console.log(item)
-      //  })
+      if (!this.cardData.some((item) => item.id == products.id)) {
+       this.cardData.push(products);
+       this.cardtotal=0;
+       this.cardData.forEach(item =>{
+         this.cardtotal += (item.quantity*item.price)
+         //console.log(item)
+       })
      
-      //  }  
+       }  
        //console.log(this.cardData);
    
       });
@@ -55,12 +55,12 @@ export class ViewCartComponent implements OnInit {
    
   
 
-  //  removeitem(itmindex){
-  //    this.itmeindex = itmindex;
-  //  // console.log(this.itmeindex);
-  //   this.cardData.splice(itmindex, 1);  
+   removeitem(itmindex){
+     this.itmeindex = itmindex;
+   // console.log(this.itmeindex);
+    this.cardData.splice(itmindex, 1);  
    
-  //  }
+   }
   
   //  incrementQty(addeditem:any){
   //    var i:number;

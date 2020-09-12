@@ -25,7 +25,7 @@ export class CartTotalComponent implements OnInit {
       }else{
         alert('This item already added')
       }
-       //console.log(this.cardData.length);
+       //console.log(this.cardData);
    
       });
   }
