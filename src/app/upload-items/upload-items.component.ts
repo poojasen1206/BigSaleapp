@@ -49,6 +49,6 @@ onSubmit(){
          (err)=>console.log(err)
       );
        this.addForm.reset();
-}
+ }
 
 }

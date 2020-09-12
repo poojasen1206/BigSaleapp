@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable} from 'rxjs';
+import { Subject,BehaviorSubject, Observable} from 'rxjs';
 
 
 @Injectable({
@@ -7,23 +7,22 @@ import { BehaviorSubject, Observable} from 'rxjs';
 })
 export class CartinfoService {
 
-  private subject: BehaviorSubject < string > = new BehaviorSubject < string > (null);
- //subject = new Subject();
+  //private subject: BehaviorSubject < string > = new BehaviorSubject < string > (null);
+ subject = new Subject();
  //private subject = new Subject();
 
   constructor(private Cartinfomsg:CartinfoService) { }
 
 sendMsg(product){
   //console.log(product);
-  this.subject.next(product) ; //triggering an event
+  this.subject.next(product) ;      //triggering an event
 }
-public getMsg(): Observable < string > {
-  return this.subject;
-}
-//msginfo$ = this.subject.asObservable();
+// getMsg(): Observable<any> {
+//    return this.subject;
+//  }
+ msginfo$ = this.subject.asObservable();
 // getMsg(){
-  //console.log('hjgjg');
- //  return this.subject.asObservable();
- //}
+//     return this.subject.asObservable();
+//  }
 
 }

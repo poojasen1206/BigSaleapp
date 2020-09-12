@@ -24,19 +24,19 @@ export class ViewCartComponent implements OnInit {
   constructor(private Cartinfomsg:CartinfoService) {   }
     
    ngOnInit():void {
-    this.Cartinfomsg.getMsg()
+    this.Cartinfomsg.msginfo$
     .subscribe((products:any) => {
-     // this.size = products.length;
-      // console.log(this.size);
-      if (!this.cardData.some((item) => item.id == products.id)) {
-       this.cardData.push(products);
-       this.cardtotal=0;
-       this.cardData.forEach(item =>{
-         this.cardtotal += (item.quantity*item.price)
-         console.log(item)
-       })
+      this.size = products.length;
+       console.log(this.size);
+      // if (!this.cardData.some((item) => item.id == products.id)) {
+      //  this.cardData.push(products);
+      //  this.cardtotal=0;
+      //  this.cardData.forEach(item =>{
+      //    this.cardtotal += (item.quantity*item.price)
+      //    console.log(item)
+      //  })
      
-       }  
+      //  }  
        //console.log(this.cardData);
    
       });
