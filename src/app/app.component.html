@@ -1,5 +1,5 @@
 <app-header></app-header>
 <app-home *ngIf="router === ''"></app-home>
-<app-cart-total></app-cart-total>
-<app-view-cart></app-view-cart>
+<app-cart-total *ngIf="router === '/home'"></app-cart-total>
+<app-view-cart *ngIf="router === '/home'"></app-view-cart>
 <app-footer></app-footer>

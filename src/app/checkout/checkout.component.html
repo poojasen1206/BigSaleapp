@@ -1,0 +1,86 @@
+<div class="container">
+    <form [formGroup]="Billingdetails" (ngSubmit)="onSubmit()">
+
+    <div class="row">
+		<div class="col-12 col-md-6 col-lg-6">
+        <div class="mt-5">
+            <h3>Billing Details </h3>
+        </div>
+        <div class="row">
+			<div class="form-group col-12 col-sm-6 col-md-6 col-lg-6">
+			  <label for="name">First Name</label>
+			  <input type="name"formControlName="fname" class="form-control input-text" id="lname" placeholder="First name">
+            </div>
+            <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6">
+                <label for="name">Last Name</label>
+                <input type="name"formControlName="lname" class="form-control input-text" id="lname" placeholder="Last name">
+              </div>
+        </div>
+        <div class="row">
+			<div class="form-group col-12 col-sm-12 col-md-12 col-lg-12">
+			  <label for="email">Email</label>
+			  <input type="name" formControlName="email"class="form-control input-text" id="email" placeholder="email">
+            </div>
+        </div>
+        <div class="row">
+			
+            <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12">
+                <label for="Address">Address</label>
+                <input type="name" formControlName="address"class="form-control input-text" id="address" placeholder="adderess">
+              </div>
+        </div>
+       
+        <div class="row">
+			
+            <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12">
+                <label for="City">City</label>
+                <input type="text"formControlName="city" class="form-control input-text" id="city" placeholder="city">
+              </div>
+           
+        </div>
+        <div class="row">
+			
+            <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6">
+                <label for="State">State</label>
+                <input type="text"formControlName="state" class="form-control input-text" id="state" placeholder="state">
+              </div>
+            <div class="form-group col-12 col-sm-6 col-md-6 col-lg-6">
+                <label for="zip">Zip Code</label>
+                <input type="text" formControlName="zip"class="form-control input-text" id="zip" placeholder="zip">
+            </div>
+		</div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-6">
+            <div class="mt-5">
+                <h3>Payment Details </h3>
+            </div>
+            <div class="row">
+                <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12">
+                  <label for="cardno">Card Owner Name</label>
+                  <input type="name"formControlName="cardno" class="form-control input-text" id="cardno" placeholder="card owner name">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12">
+                  <label for="ccno">Credit Card Number </label>
+                  <input type="name" formControlName="ccno"class="form-control input-text" id="ccnno" placeholder="ccn">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12">
+                  <label for="expmonth">Expiry Month </label>
+                  <input type="name" formControlName="expmonth" class="form-control input-text" id="expmonth" placeholder="mm/dd">
+                </div>
+            </div>
+            <div class="row">
+                <div class="form-group col-12 col-sm-12 col-md-12 col-lg-12">
+                    <input type="submit" class="btn btn-primary float-right" value="Process to Pay">
+                </div>
+            </div>
+        </div>
+    
+    </div>
+</form>
+</div>
+    

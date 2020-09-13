@@ -62,21 +62,21 @@ export class ViewCartComponent implements OnInit {
    
    }
   
-  //  incrementQty(addeditem:any){
-  //    var i:number;
-  //   this.qyt  = addeditem.quantity++;
+   incrementQty(addeditem:any){
+     var i:number;
+    this.qyt  = addeditem.quantity++;
    
-  //  }
+   }
      
      //decrements item
      
-    //  decrementQty(addeditem:any){
+     decrementQty(addeditem:any){
            
-    //      if (addeditem.quantity > 1) {
-    //         addeditem.quantity--;
-    //    }
+         if (addeditem.quantity > 1) {
+            addeditem.quantity--;
+       }
                
-    // }
+    }
     //  checkout(){
     //    //this.router.navigate(['/checkout']);
     //  }

@@ -26,5 +26,8 @@ export class ServiceOneService {
     };
     return this.http.get<ApiResponse>(this.baseUrl + 'getById.php?id='+ id, options);
    }
-
+ 
+   billingpost(billingdetails:Items):Observable<ApiResponse>{
+    return this.http.post<ApiResponse>(this.baseUrl + 'billingdetails.php', billingdetails);
+  }
 }

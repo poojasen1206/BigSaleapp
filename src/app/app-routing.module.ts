@@ -5,6 +5,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { UploadItemsComponent } from './upload-items/upload-items.component';
 import { ViewDetailsComponent } from './view-details/view-details.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { ThankyoupageComponent } from './thankyoupage/thankyoupage.component';
 
 const routes: Routes = [
   {
@@ -24,7 +26,14 @@ const routes: Routes = [
   },
   {
     path:'details/:id', component:ViewDetailsComponent
+  },
+  {
+    path:'checkout', component:CheckoutComponent
+  },
+  {
+    path:'thankyou', component:ThankyoupageComponent
   }
+
 ];
 
 @NgModule({
